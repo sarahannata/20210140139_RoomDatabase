@@ -19,9 +19,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.pampraktikum7.R
 import com.example.pampraktikum7.data.Siswa
+import com.example.pampraktikum7.navigasi.DestinasiNavigasi
+
+object DestinasiHome : DestinasiNavigasi{
+    override val route = "home"
+    override val titleRes = R.string.app_name
+}
 
 @Composable
 fun BodyHome(
@@ -32,7 +40,17 @@ fun BodyHome(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
     ){
-
+        if (itemSiswa.isEmpty()){
+            Text(text = stringResource(id = R.string.deskripsi_no_item),
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.titleLarge)
+        }
+        else{
+            ListSiswa(
+                itemSiswa = itemSiswa,
+                modifier = Modifier
+                    .padding(horizontal = dimensionResource(id = R.dimen.padding_small)))
+        }
     }
 }
 
