@@ -16,9 +16,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pampraktikum7.R
 import com.example.pampraktikum7.model.DetailSiswa
+import com.example.pampraktikum7.model.EntryViewModel
+import com.example.pampraktikum7.model.PenyediaViewModel
 import com.example.pampraktikum7.model.UIStateSiswa
+
+@Composable
+fun EntrySiswaScreen(
+ navigateBack: () -> Unit,
+ modifier: Modifier = Modifier,
+ viewModel: EntryViewModel = viewModel(factory = PenyediaViewModel.Factory)
+){}
 
 @Composable
 fun EntrySiswaBody(
