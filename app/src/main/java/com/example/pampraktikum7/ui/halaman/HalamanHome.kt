@@ -21,6 +21,12 @@ import com.example.pampraktikum7.R
 import com.example.pampraktikum7.data.Siswa
 
 @Composable
+fun ListSiswa(
+    itemSiswa: List<Siswa>,
+    modifier: Modifier = Modifier
+){}
+
+@Composable
 fun DataSiswa(
     siswa: Siswa,
     modifier: Modifier = Modifier
