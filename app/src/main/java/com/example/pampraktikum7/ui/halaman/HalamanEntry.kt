@@ -16,6 +16,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import com.example.pampraktikum7.R
 import com.example.pampraktikum7.model.DetailSiswa
+import com.example.pampraktikum7.model.UIStateSiswa
+
+@Composable
+fun EntrySiswaBody(
+ uiStateSiswa: UIStateSiswa,
+ onSiswaValueChange: (DetailSiswa) -> Unit,
+ onSaveClick: () -> Unit,
+ modifier: Modifier = Modifier
+){}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
