@@ -22,13 +22,25 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pampraktikum7.R
 import com.example.pampraktikum7.data.Siswa
+import com.example.pampraktikum7.model.HomeViewModel
+import com.example.pampraktikum7.model.PenyediaViewModel
 import com.example.pampraktikum7.navigasi.DestinasiNavigasi
 
 object DestinasiHome : DestinasiNavigasi{
     override val route = "home"
     override val titleRes = R.string.app_name
+}
+
+@Composable
+fun HomeScreen(
+    navigateToItemEntry: () -> Unit,
+    modifier: Modifier = Modifier,
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
+){
+
 }
 
 @Composable
